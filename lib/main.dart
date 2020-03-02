@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+
+            mainAxisAlignment: MainAxisAlignment.center, //put everthing in the center
             children: <Widget>[
               CircleAvatar(
                 radius: 60.0,
@@ -34,45 +36,42 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.phone, color: Colors.teal,),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+27 78 235 457',
-                      style: TextStyle(
-                        fontFamily: 'SourceSanPro',
-                        fontSize: 18.1,
-                      ),
-                    )
-                  ],
+
+              SizedBox(
+                height: 20.00,
+                width: 150.00,
+                child: Divider(
+                  color: Colors.teal.shade50,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.email, color: Colors.teal,),
-                    SizedBox(
-                      width: 10.0,
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.teal,),
+                  title: Text(
+                    '+27 78 235 457',
+                    style: TextStyle(
+                      fontFamily: 'SourceSanPro',
+                      fontSize: 18.1,
                     ),
-                    Text(
+                  ),
+                ) ,
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
                       'innocent@mabuza.com',
                       style: TextStyle(
                         fontFamily: 'SourceSanPro',
                         fontSize: 18.1,
                       ),
-                    )
-                  ],
                 ),
+              ),
               ),
             ],
           ),
